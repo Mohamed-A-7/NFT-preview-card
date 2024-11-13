@@ -58,9 +58,11 @@ main > .image:hover::before {
   top: 50%;
   transform: translate(-50%, -50%);
   z-index: 99;
+  cursor: pointer;
 }
 main > .image:hover::after {
   content: "";
+  cursor: pointer;
   position: absolute;
   width: 100%;
   height: calc(100% - 4px);

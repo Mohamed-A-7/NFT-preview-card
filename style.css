@@ -16,10 +16,6 @@
   --White: hsl(0, 0%, 100%);
 }
 
-p {
-  font-size: 18px;
-}
-
 body {
   font-family: "outfit";
   background-color: var(--Very-dark-blue-main-BG);

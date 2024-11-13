@@ -41,7 +41,6 @@ main > .image {
   position: relative;
   border-radius: 10px;
   overflow: hidden;
-  transition: 0.4s;
 }
 
 main > .image:hover::before {

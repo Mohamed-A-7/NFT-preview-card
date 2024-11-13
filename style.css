@@ -1,0 +1,137 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --Soft-blue: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%);
+
+  /* ### Neutral */
+
+  --Very-dark-blue-main-BG: hsl(217, 54%, 11%);
+  --Very-dark-blue-card-BG: hsl(216, 50%, 16%);
+  --Very-dark-blue-line: hsl(215, 32%, 27%);
+  --White: hsl(0, 0%, 100%);
+}
+
+p {
+  font-size: 18px;
+}
+
+body {
+  font-family: "outfit";
+  background-color: var(--Very-dark-blue-main-BG);
+}
+
+main {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 280px;
+  background-color: var(--Very-dark-blue-card-BG);
+  border-radius: 10px;
+  padding: 18px;
+  box-shadow: 0 0 0px 10px #0c1729, 0 0 3px 17px #0c192c;
+}
+
+main > *:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+main > .image {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 0.4s;
+}
+
+main > .image:hover::before {
+  content: "";
+  background-image: url(./images/icon-view.svg);
+  width: 50px;
+  height: 40px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99;
+}
+main > .image:hover::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: calc(100% - 4px);
+  left: 50%;
+  top: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transform: translate(-50%, -50%);
+  background-color: var(--Cyan);
+  border-radius: 10px;
+  opacity: 0.5;
+  fill: red;
+}
+
+h1 {
+  color: var(--White);
+  font-size: 18px;
+  font-weight: normal;
+}
+
+main > p {
+  font-size: 13px;
+  color: var(--Soft-blue);
+  line-height: 140%;
+}
+
+.eth-day {
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--Very-dark-blue-line);
+}
+
+.eth-day div {
+  gap: 8px;
+  font-size: 14px;
+}
+
+.eth-day div:first-child {
+  color: var(--Cyan);
+}
+.eth-day div:last-child {
+  color: var(--Soft-blue);
+}
+
+.author {
+  justify-content: start !important;
+  font-size: 14px;
+
+  span {
+    color: var(--Soft-blue);
+    margin-right: 7px;
+  }
+  strong {
+    color: var(--White);
+    font-weight: 300;
+  }
+}
+.author img {
+  border: 1px solid var(--White);
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.active:hover {
+  cursor: pointer;
+  color: var(--Cyan);
+}
